@@ -1,0 +1,27 @@
+# IBM Developer's Workframe/2 Make File Creation run at 22:41:52 on 03/15/93
+
+# Make File Creation run in directory:
+#   F:\DES;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT20\C\OS2H;
+#   F:\TOOLKT20\ASM\OS2INC;
+#   F:\IBMC\INCLUDE;
+
+
+DES.OBJ:  DES.C  \
+#  {$(INCLUDE);}os2.h  \
+#  {$(INCLUDE);}stdio.h  \
+#  {$(INCLUDE);}string.h  \
+   {.;$(INCLUDE);}des.h  \
+   TSTDES.MAK
+
+TABLES.OBJ:  TABLES.C  \
+#  {$(INCLUDE);}os2.h  \
+   TSTDES.MAK
+
+tstdes.OBJ:  tstdes.c  \
+#  {$(INCLUDE);}os2.h  \
+#  {$(INCLUDE);}stdio.h  \
+#  {$(INCLUDE);}stdlib.h  \
+   TSTDES.MAK
